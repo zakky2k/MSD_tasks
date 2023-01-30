@@ -1,2 +1,2 @@
 # MSD_tasks
-Task repo 
+Task repo for requested exercises.
