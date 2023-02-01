@@ -15,7 +15,7 @@ echo "$(date +"%F_%T") Process Starting - checking env. variables" > $LOGFILE
 
 # Test if $SOURCE and $TARGET already declared 
 if [ x"${SOURCE}" == "x" ] || [ x"${TARGET}" == "x" ]; then 
-     echo "$(date +"%F_%T") Source / Target  not assigned to a Env. variables" >> $LOGFILE
+     echo "$(date +"%F_%T") FATAL: Source / Target directories not assigned to a Env. variables" >> $LOGFILE && exit 100
   else
      echo "$(date +"%F_%T") Values assigned to Source / Target variables" >> $LOGFILE
   fi

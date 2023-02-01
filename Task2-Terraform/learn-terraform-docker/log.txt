@@ -1,0 +1,176 @@
+zak@UbuntuVirtualBox:~/learn-terraform-docker$ nano main.tf 
+
+zak@UbuntuVirtualBox:~/learn-terraform-docker$ terraform apply
+
+
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+
+  + create
+
+
+
+Terraform will perform the following actions:
+
+
+
+  # docker_container.nginx will be created
+
+  + resource "docker_container" "nginx" {
+
+      + attach           = false
+
+      + bridge           = (known after apply)
+
+      + command          = (known after apply)
+
+      + container_logs   = (known after apply)
+
+      + entrypoint       = (known after apply)
+
+      + env              = (known after apply)
+
+      + exit_code        = (known after apply)
+
+      + gateway          = (known after apply)
+
+      + hostname         = (known after apply)
+
+      + id               = (known after apply)
+
+      + image            = (known after apply)
+
+      + init             = (known after apply)
+
+      + ip_address       = (known after apply)
+
+      + ip_prefix_length = (known after apply)
+
+      + ipc_mode         = (known after apply)
+
+      + log_driver       = "json-file"
+
+      + logs             = false
+
+      + must_run         = true
+
+      + name             = "tutorial"
+
+      + network_data     = (known after apply)
+
+      + read_only        = false
+
+      + remove_volumes   = true
+
+      + restart          = "no"
+
+      + rm               = false
+
+      + security_opts    = (known after apply)
+
+      + shm_size         = (known after apply)
+
+      + start            = true
+
+      + stdin_open       = false
+
+      + tty              = false
+
+
+
+      + healthcheck {
+
+          + interval     = (known after apply)
+
+          + retries      = (known after apply)
+
+          + start_period = (known after apply)
+
+          + test         = (known after apply)
+
+          + timeout      = (known after apply)
+
+        }
+
+
+
+      + labels {
+
+          + label = (known after apply)
+
+          + value = (known after apply)
+
+        }
+
+
+
+      + ports {
+
+          + external = 8000
+
+          + internal = 80
+
+          + ip       = "0.0.0.0"
+
+          + protocol = "tcp"
+
+        }
+
+    }
+
+
+
+  # docker_image.nginx will be created
+
+  + resource "docker_image" "nginx" {
+
+      + id           = (known after apply)
+
+      + keep_locally = false
+
+      + latest       = (known after apply)
+
+      + name         = "nginx:latest"
+
+      + output       = (known after apply)
+
+      + repo_digest  = (known after apply)
+
+    }
+
+
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+╷
+
+│ Warning: Deprecated attribute
+
+│ 
+
+│   on main.tf line 18, in resource "docker_container" "nginx":
+
+│   18:   image = docker_image.nginx.latest
+
+│ 
+
+│ The attribute "latest" is deprecated. Refer to the provider documentation for details.
+
+│ 
+
+│ (and one more similar warning elsewhere)
+
+╵
+
+
+
+Do you want to perform these actions?
+
+  Terraform will perform the actions described above.
+
+  Only 'yes' will be accepted to approve.
+
+
+
+  Enter a value: yes
+
